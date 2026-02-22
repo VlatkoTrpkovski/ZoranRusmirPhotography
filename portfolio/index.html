@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoran Rusmir — Photography Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">ZR</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle">Photographer & Visual Storyteller</p>
+            <h1 class="hero-title">Zoran Rusmir</h1>
+            <p class="hero-tagline">Capturing moments that tell stories</p>
+            <a href="#portfolio" class="btn btn-primary">View My Work</a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About / CV Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        <span>Your Photo</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <p class="about-intro">
+                        I'm a passionate photographer based in Europe, specializing in landscape,
+                        street, and portrait photography. With an eye for detail and a love for
+                        natural light, I strive to capture the beauty in everyday moments.
+                    </p>
+                    <div class="cv-section">
+                        <h3>Experience</h3>
+                        <div class="cv-item">
+                            <span class="cv-year">2022 — Present</span>
+                            <div>
+                                <strong>Freelance Photographer</strong>
+                                <p>Landscape & portrait photography, editorial work, and visual storytelling.</p>
+                            </div>
+                        </div>
+                        <div class="cv-item">
+                            <span class="cv-year">2019 — 2022</span>
+                            <div>
+                                <strong>Studio Photographer</strong>
+                                <p>Commercial and editorial photography for brands, magazines, and private clients.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cv-section">
+                        <h3>Skills & Tools</h3>
+                        <div class="skills-grid">
+                            <span class="skill-tag">Landscape</span>
+                            <span class="skill-tag">Portraits</span>
+                            <span class="skill-tag">Street</span>
+                            <span class="skill-tag">Adobe Lightroom</span>
+                            <span class="skill-tag">Photoshop</span>
+                            <span class="skill-tag">Sony Alpha</span>
+                            <span class="skill-tag">Drone Photography</span>
+                            <span class="skill-tag">Night Photography</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Portfolio</h2>
+            </div>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="landscape">Landscape</button>
+                <button class="filter-btn" data-filter="portrait">Portrait</button>
+                <button class="filter-btn" data-filter="street">Street</button>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item landscape" data-category="landscape">
+                    <div class="gallery-placeholder" style="background-color: #2a3a4a;">
+                        <span>Mountain Landscape</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>Mountain Sunrise</h4>
+                        <p>Landscape</p>
+                    </div>
+                </div>
+                <div class="gallery-item portrait" data-category="portrait">
+                    <div class="gallery-placeholder" style="background-color: #4a3a2a;">
+                        <span>Portrait Study</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>Golden Hour Portrait</h4>
+                        <p>Portrait</p>
+                    </div>
+                </div>
+                <div class="gallery-item street" data-category="street">
+                    <div class="gallery-placeholder" style="background-color: #3a3a3a;">
+                        <span>Urban Scene</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>City Lights</h4>
+                        <p>Street</p>
+                    </div>
+                </div>
+                <div class="gallery-item landscape" data-category="landscape">
+                    <div class="gallery-placeholder" style="background-color: #1a3a2a;">
+                        <span>Forest Path</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>Enchanted Forest</h4>
+                        <p>Landscape</p>
+                    </div>
+                </div>
+                <div class="gallery-item portrait" data-category="portrait">
+                    <div class="gallery-placeholder" style="background-color: #3a2a3a;">
+                        <span>Studio Portrait</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>Dramatic Light</h4>
+                        <p>Portrait</p>
+                    </div>
+                </div>
+                <div class="gallery-item street" data-category="street">
+                    <div class="gallery-placeholder" style="background-color: #2a2a3a;">
+                        <span>Night Street</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>Rainy Evening</h4>
+                        <p>Street</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Blog</h2>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image-placeholder" style="background-color: #2a3a4a;"></div>
+                    <div class="blog-card-content">
+                        <span class="blog-date">Feb 15, 2026</span>
+                        <h3>The Art of Golden Hour Photography</h3>
+                        <p>Exploring the magical light that transforms ordinary scenes into extraordinary photographs...</p>
+                        <a href="#" class="blog-read-more">Read More →</a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image-placeholder" style="background-color: #3a2a2a;"></div>
+                    <div class="blog-card-content">
+                        <span class="blog-date">Jan 28, 2026</span>
+                        <h3>Street Photography: Finding Stories in the Ordinary</h3>
+                        <p>How I approach candid photography in urban environments to capture authentic moments...</p>
+                        <a href="#" class="blog-read-more">Read More →</a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image-placeholder" style="background-color: #2a2a3a;"></div>
+                    <div class="blog-card-content">
+                        <span class="blog-date">Jan 10, 2026</span>
+                        <h3>My Gear Setup for 2026</h3>
+                        <p>A detailed look at the cameras, lenses, and accessories I use for different types of shoots...</p>
+                        <a href="#" class="blog-read-more">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Get In Touch</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p class="contact-intro">
+                        Interested in working together? Whether it's a project, a collaboration,
+                        or just a conversation about photography — I'd love to hear from you.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:hello@zoranrusmir.com">hello@zoranrusmir.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Location</span>
+                            <span>Europe</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Social</span>
+                            <div class="social-links">
+                                <a href="#" aria-label="Instagram">Instagram</a>
+                                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                                <a href="#" aria-label="500px">500px</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Zoran Rusmir. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <div class="lightbox-content" id="lightboxContent"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
