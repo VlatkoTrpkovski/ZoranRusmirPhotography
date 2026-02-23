@@ -443,7 +443,7 @@ async function loadDynamicGallery() {
             observer.observe(el);
         });
     } catch (err) {
-        console.log('Using static gallery (Firebase not available)');
+        console.error('Error loading gallery from Firebase:', err);
     }
 }
 
@@ -478,7 +478,7 @@ async function loadDynamicBlog() {
             observer.observe(el);
         });
     } catch (err) {
-        console.log('Using static blog (Firebase not available)');
+        console.error('Error loading blog from Firebase:', err);
     }
 }
 
