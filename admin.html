@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin — Zoran Rusmir Photography</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Login Screen -->
+    <div class="admin-login" id="loginScreen">
+        <div class="login-card">
+            <div class="login-brand">ZR</div>
+            <h1>Admin Login</h1>
+            <p>Photography Portfolio Management</p>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="admin@zoranrusmir.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter password" required>
+                </div>
+                <div class="login-error" id="loginError"></div>
+                <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div class="admin-dashboard" id="dashboard" style="display:none;">
+
+        <!-- Admin Header -->
+        <header class="admin-header">
+            <div class="admin-header-left">
+                <div class="nav-brand">ZR</div>
+                <span class="admin-label">Admin Panel</span>
+            </div>
+            <div class="admin-header-right">
+                <span id="adminEmail"></span>
+                <button class="btn btn-small" id="logoutBtn">Logout</button>
+            </div>
+        </header>
+
+        <!-- Admin Navigation Tabs -->
+        <div class="admin-tabs">
+            <button class="admin-tab active" data-tab="gallery">📷 Gallery</button>
+            <button class="admin-tab" data-tab="blog">📝 Blog Posts</button>
+        </div>
+
+        <div class="admin-content">
+
+            <!-- Gallery Management -->
+            <section class="admin-section active" id="gallerySection">
+                <h2>Upload Photo</h2>
+                <form id="photoUploadForm" class="admin-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="photoTitle">Title</label>
+                            <input type="text" id="photoTitle" placeholder="e.g., Mountain Sunrise" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="photoCategory">Category</label>
+                            <select id="photoCategory" required>
+                                <option value="landscape">Landscape</option>
+                                <option value="portrait">Portrait</option>
+                                <option value="street">Street</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="photoFile">Photo</label>
+                        <div class="file-upload" id="photoDropZone">
+                            <input type="file" id="photoFile" accept="image/*" required>
+                            <p>Drag & drop or click to select a photo</p>
+                            <img id="photoPreview" class="upload-preview" style="display:none;">
+                        </div>
+                    </div>
+                    <div class="upload-progress" id="photoProgress" style="display:none;">
+                        <div class="progress-bar"><div class="progress-fill" id="photoProgressFill"></div></div>
+                        <span id="photoProgressText">0%</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Upload Photo</button>
+                </form>
+
+                <h2 class="section-gap">Existing Photos</h2>
+                <div class="admin-grid" id="adminGalleryGrid">
+                    <p class="loading-text">Loading photos...</p>
+                </div>
+            </section>
+
+            <!-- Blog Management -->
+            <section class="admin-section" id="blogSection" style="display:none;">
+                <h2>Create Blog Post</h2>
+                <form id="blogPostForm" class="admin-form">
+                    <div class="form-group">
+                        <label for="blogTitle">Title</label>
+                        <input type="text" id="blogTitle" placeholder="e.g., The Art of Golden Hour Photography" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="blogContent">Content</label>
+                        <textarea id="blogContent" rows="8" placeholder="Write your blog post content here..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="blogCover">Cover Image</label>
+                        <div class="file-upload" id="blogDropZone">
+                            <input type="file" id="blogCover" accept="image/*">
+                            <p>Drag & drop or click to select a cover image (optional)</p>
+                            <img id="blogPreview" class="upload-preview" style="display:none;">
+                        </div>
+                    </div>
+                    <div class="upload-progress" id="blogProgress" style="display:none;">
+                        <div class="progress-bar"><div class="progress-fill" id="blogProgressFill"></div></div>
+                        <span id="blogProgressText">0%</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Publish Post</button>
+                </form>
+
+                <h2 class="section-gap">Existing Posts</h2>
+                <div class="admin-list" id="adminBlogList">
+                    <p class="loading-text">Loading posts...</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
+

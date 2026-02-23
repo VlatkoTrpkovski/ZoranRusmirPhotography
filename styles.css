@@ -17,6 +17,11 @@ a:hover{color:var(--accent-h)}
 .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:5px}
 .nav-toggle span{display:block;width:25px;height:2px;background:var(--text);transition:var(--tr)}
 
+.lang-switcher{display:flex;gap:.4rem;margin-left:1rem}
+.lang-btn{background:transparent;border:1px solid var(--border);color:var(--muted);font-family:var(--body);font-size:.7rem;letter-spacing:1px;padding:.3rem .6rem;cursor:pointer;transition:var(--tr)}
+.lang-btn:hover{border-color:var(--accent);color:var(--accent)}
+.lang-btn.active{border-color:var(--accent);color:var(--accent);background:rgba(201,169,110,.1)}
+
 .hero{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,#1a1a2e,#16213e 50%,#0f3460);overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 80%,rgba(201,169,110,.08),transparent 50%),radial-gradient(circle at 80% 20%,rgba(201,169,110,.05),transparent 50%)}
 .hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,.4)}
@@ -110,6 +115,7 @@ a:hover{color:var(--accent-h)}
 .nav-links{position:fixed;top:0;right:-100%;width:70%;height:100vh;background:var(--bg2);flex-direction:column;justify-content:center;align-items:center;gap:2rem;transition:right .4s ease}
 .nav-links.open{right:0}
 .nav-toggle{display:flex;z-index:1001}
+.lang-switcher{position:absolute;top:1rem;right:4rem}
 .nav-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
 .nav-toggle.active span:nth-child(2){opacity:0}
 .nav-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
